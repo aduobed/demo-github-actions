@@ -8,6 +8,8 @@ group = 'com.mallon'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+archivesBaseName = 'tlc4-springboot-final-project-image'
+
 repositories {
 	mavenCentral()
 }
