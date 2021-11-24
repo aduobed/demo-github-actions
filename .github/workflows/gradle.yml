@@ -27,4 +27,14 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run a one-liner script
-      run: echo Hello, Spring Boot!
+      run: echo Hello, Build in Action!!
+    - name: Build and push to docker hub
+      uses: mr-smithers-excellent/docker-build-push@v5
+    - name: Build & push Docker image
+      with:
+        image: obedus10/tlc4-springboot-final-project-image
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
