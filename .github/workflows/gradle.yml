@@ -30,7 +30,6 @@ jobs:
       run: echo Hello, Build in Action!!
     - name: Build and push to docker hub
       uses: mr-smithers-excellent/docker-build-push@v5
-    - name: Build & push Docker image
       with:
         image: obedus10/tlc4-springboot-final-project-image
         tags: latest
